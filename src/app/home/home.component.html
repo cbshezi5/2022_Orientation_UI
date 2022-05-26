@@ -1,4 +1,4 @@
-<div style="margin-top: -10%;">
+<div style="margin-top: -10%;" *ngIf="deviceInfo.os == 'Windows'; else Mobile">
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky" id="mainNav" style="z-index: 80;">
     <div class="container-fluid">
         <a class="navbar-brand" routerLink="./">
@@ -93,5 +93,84 @@
     </div>
 </mat-card>
 </div>
+
+
+<!-----------------------------------------------------------------------Mobile---------------------------------------------------------------------------------------------->
+<ng-template #Mobile>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky" id="mainNav" style="z-index: 80;">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="./">
+                <img src="https://dh2dlbjd2qx17.cloudfront.net/img/tut-logo.png" alt="" width="150" height="50" style="padding: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+    
+                <ul class="navbar-nav me-auto" style="margin-left: 20px;">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="./">Home |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/blog">Blog </a>
+                    </li>
+                </ul>
+    
+                <div class>
+                    <ul class="navbar-nav ms-auto">
+                        <li><a class="nav-link" id="sign-in" routerLink="/student-login">Sign in</a></li>
+                        <li><a class="nav-link" id="sign-up" routerLink="/student-reg">Sign up</a></li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <header name="home" style="display: flex;justify-content: center;align-items: center;">
+
+        <h1 style="position: absolute; z-Index:23;font-size: 40px;font-weight: 700;text-shadow: 2px 2px #0d4794;">TUT Online Orientation</h1>
+        <h1 style="position: absolute; z-Index:23;font-size: 20px;font-weight: 400;margin-top: 20%;text-shadow: 2px 2px #0d4794;">For First time students</h1>
+    
+        <div style="display: flex; justify-content: center;z-index: 40; position: absolute; margin-top: 100%;">
+            <a routerLink="/student-login" (click)="startOr()" style=" justify-content: center;border-radius: 25px; border-width: 20px;" class="myButton">Start Orientation
+            <em class="ml-2" data-feather="arrow-right"></em>
+        </a>
+    
+        </div>
+    
+        <div class="intro-text">
+            <mdb-carousel [animation]="'fade'" style="z-index: -10;">
+                <mdb-carousel-item style="height:1300px;width:50%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (2 of 16) - Copy.jpg" class="d-block w-40 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:50%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (12 of 16).jpg" class="d-block w-40 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:50%">
+                    <img style="object-fit: cover;" src="../../../assets/img/ori31 (26 of 32).jpg" class="d-block w-40 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:50%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (16 of 16).jpg" class="d-block w-40 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:50%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori31 (25 of 32).jpg" class="d-block w-40 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:50%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (11 of 16).jpg" class="d-block w-40 h-100" alt="..." />
+                </mdb-carousel-item>
+            </mdb-carousel>
+        </div>
+    </header>
+
+
+
+
+
+    
+</ng-template>
 
 <!-- //////////////////////// -->
