@@ -1,9 +1,9 @@
- <!-- Sidebar -->
- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        
+
         <div class="sidebar-brand-text mx-3"> Administration </div>
     </a>
 
@@ -11,18 +11,18 @@
     <hr class="sidebar-divider my-20">
 
     <!-- Nav Item - Dashboard -->
-    <li [class]="classNameNav[0]">
-        <a class="nav-link" (click)="navLinkHandle(0,'/dashboard')">    
+    <li [class]="classNameNav[0]" style="cursor:pointer">
+        <a class="nav-link" (click)="navLinkHandle(0,'/dashboard')">
             <mat-icon>home</mat-icon>
             <span class="textAlign">Dashboard</span>
-    </a>
+        </a>
     </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Nav Item - Pages Collapse Menu -->
-    
+
     <!-- <li [class]="classNameNav[1]">
         <a class="nav-link" (click)="navLinkHandle(1,'/generate-report')">
             <mat-icon >picture_as_pdf</mat-icon>
@@ -30,7 +30,7 @@
         </a>
     </li> -->
 
-    <li [class]="classNameNav[2]">
+    <li [class]="classNameNav[1]" style="cursor:pointer">
         <a class="nav-link" (click)="navLinkHandle(2,'/track-student')">
             <mat-icon>timeline</mat-icon>
             <span class="textAlign">Tracking</span>
@@ -38,7 +38,7 @@
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li [class]="classNameNav[3]">
+    <li [class]="classNameNav[2]" style="cursor:pointer">
         <a class="nav-link" (click)="navLinkHandle(3,'/survey-data')">
             <mat-icon>assignment_turned_in</mat-icon>
             <span class="textAlign">Survey Data</span>
@@ -48,9 +48,9 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <li [class]="classNameNav[4]">
+    <li [class]="classNameNav[3]" style="cursor:pointer">
         <a class="nav-link" (click)="navLinkHandle(4,'upload-cnt')">
-            <mat-icon >play_circle_filled</mat-icon>
+            <mat-icon>play_circle_filled</mat-icon>
             <span class="textAlign">Upload Content</span>
         </a>
     </li>
