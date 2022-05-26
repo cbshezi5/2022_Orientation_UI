@@ -25,6 +25,8 @@ export class CampusComponent implements OnInit {
   usernames =""
   userEmail =""
 
+  showText = true
+
   public astepper:any
 
   surveyAleadyDone = false
@@ -90,6 +92,11 @@ export class CampusComponent implements OnInit {
   ) {
 
       this.deviceInfo = this.deviceService.getDeviceInfo();
+      if(this.deviceInfo.os != "Windows")
+      {
+        this.showText = false;
+      }
+
       // const isMobile = this.deviceService.isMobile();
       // const isTablet = this.deviceService.isTablet();
       // const isDesktopDevice = this.deviceService.isDesktop();

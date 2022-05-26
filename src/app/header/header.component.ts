@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   @Input() public loggedin :string ="";
+  @Input() public computer :boolean =true;
 
   constructor(
     private router: Router) { }
