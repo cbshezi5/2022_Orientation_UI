@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   @Input() public loggedin :string ="";
-  @Input() public computer :boolean =true;
+  @Input() public computer :boolean = true;
 
   constructor(
     private router: Router) { }
@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.loggedin)
   }
 
   logout(){

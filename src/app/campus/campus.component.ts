@@ -25,7 +25,7 @@ export class CampusComponent implements OnInit {
   usernames =""
   userEmail =""
 
-  showText = true
+  public showText = true
 
   public astepper:any
 
