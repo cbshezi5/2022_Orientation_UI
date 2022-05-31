@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client'
 import { HttpClient } from '@angular/common/http';
-import { GRAPH_HOSTNAME,SOCK_HOSTNAME } from '../globals'
+import { GRAPH_HOSTNAME } from '../globals'
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +9,8 @@ import { GRAPH_HOSTNAME,SOCK_HOSTNAME } from '../globals'
 export class SocketioService {
 
   private serverAddress : string = GRAPH_HOSTNAME
-  private socketioHost : string = SOCK_HOSTNAME
   socketState : boolean = false;
 
-
-
-  public socket : io.Socket = io.connect(this.socketioHost, {transports: ['websocket', 'polling']})
 
   constructor(private http : HttpClient) { }
 

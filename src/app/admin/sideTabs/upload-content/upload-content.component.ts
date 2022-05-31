@@ -212,8 +212,6 @@ export class UploadContentComponent implements OnInit {
           this.uploadProg = "0";
           this.uploadStyle= "width:0%"
           this.uploadWait = false
-
-          this._SocketService.socket.emit("VideoUploaded")
         }, 2000);
       }
     })

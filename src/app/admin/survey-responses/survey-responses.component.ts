@@ -67,21 +67,7 @@ export class SurveyResponsesComponent implements OnInit  {
         }
     })
 
-    this._socketConnection.socket.on("countSurvey",(instream)=>{
-      if(this.dataSource.filteredData.length == 1)
-      { 
-        this.disabledGenerate = false;
-        this.generateState = "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  
-      }
-      else 
-      {
-        this.disabledGenerate = true;
-        this.generateState = "d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm" 
-      }
-      this._orientationService.getUserSurvey().subscribe((result)=>{
-        this.dataSource = result
-      })
-    });
+
   }
 
   applyFilter(event: Event) {

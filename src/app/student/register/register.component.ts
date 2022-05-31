@@ -165,8 +165,6 @@ export class RegisterComponent implements OnInit {
         this.cookieService.set("lname", this.lastName)
         this.cookieService.set("userEmail",this.email)
         this._userService.logActivity({"useremail":this.email, "activity":"Registered"}).subscribe(()=>{})
-        this._socketConnection.socket.emit('RegisteredUsers_soc')
-        this._socketConnection.socket.emit('LoggedInUsers_soc')
         this.router.navigate([''])
         console.log (this.email)
       }

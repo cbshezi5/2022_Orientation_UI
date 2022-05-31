@@ -9,11 +9,9 @@ import { SocketioService } from './socketio.service'
 })
 export class AppComponent implements OnInit {
 
-  constructor(private usersService: UserService,
-              private _socketConnection: SocketioService,
-              )
+  constructor()
   {
-    this._socketConnection.socket.emit('Visitors_soc') 
+
   }
 
   ngOnInit(){

@@ -52,7 +52,6 @@ export class ModifyvideosComponent implements OnInit {
         this.toast.success("The video was successfully deleted","Delete")
         this._orientationService.getVideos(this.data.faculty.id.toString()).subscribe((result)=>{
           this.videos = result.data
-          this._socketIO.socket.emit("VideoUploaded")
         })
       }
       else

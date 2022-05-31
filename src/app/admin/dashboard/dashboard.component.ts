@@ -69,24 +69,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
       
-      this._socketConnection.socket.on("countVisitors",(instream)=>{
-          this.visitors = instream;
-      })
-      this._socketConnection.socket.on("countStudents",(instream)=>{
-        this.students = instream;
-      })
-      this._socketConnection.socket.on("VideosCount",(instream)=>{
-        this.videos= instream;
-      })
-      this._socketConnection.socket.on("countSurvey",(instream)=>{
-        this.surveys = ((instream / this.students) * 100).toFixed(0);
-        this.noOfSurvey = instream
-        if(this.surveys == undefined) console.log("sd")
-        this.widthStyle = "width:"+this.surveys+"%"
-      })
-      this._socketConnection.socket.on("countLoggedIn",(instream)=>{
-        this.loggedIn = instream
-      })
+     
 
       function dateShift(shift : number)
       {
@@ -163,14 +146,7 @@ export class DashboardComponent implements OnInit {
       });
 
 
-      this._socketConnection.socket.on("updateLine",(instream)=>{
-        this.chart.data.datasets[0].data = JSON.parse(instream);
-        this.chart.update();
-      })
-
-      this._socketConnection.socket.on("updatePie",(instream)=>{
-        this.upload()
-      })
+     
 
       this.upload()
   }

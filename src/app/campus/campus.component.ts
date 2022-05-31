@@ -97,13 +97,6 @@ export class CampusComponent implements OnInit {
         this.showText = false;
       }
 
-      // const isMobile = this.deviceService.isMobile();
-      // const isTablet = this.deviceService.isTablet();
-      // const isDesktopDevice = this.deviceService.isDesktop();
-      // console.log(this.deviceInfo);
-      // console.log(isMobile);  // returns if the device is a mobile device (android / iPhone / windows-phone etc)
-      // console.log(isTablet);  // returns if the device us a tablet (iPad etc)
-      // console.log(isDesktopDevice); // returns if the app is running on a Desktop browser.
 
     this.userEmail = this._cookiesService.get("userEmail")
 
@@ -254,7 +247,7 @@ export class CampusComponent implements OnInit {
       if(result.error) throw result.message
     })    
    
-    this._socketConnection.socket.emit("CampusSaved")
+
     this.stepTwoComplete = true
     next(stepper)
   }
@@ -371,7 +364,7 @@ export class CampusComponent implements OnInit {
         this._orientation.StoreSurveyAnswers(this.surveyQueAnsUser).subscribe((result)=>{
           if(!result.error)
           {
-            this._socketConnection.socket.emit("Add_Survey_soc")
+           
           }
         })
        }
@@ -462,7 +455,7 @@ export class CampusComponent implements OnInit {
     this._cookiesService.delete('userEmail')
     this._cookiesService.delete('lname')
     this._cookiesService.delete('fname')
-    this._socketConnection.socket.emit('LoggedOutUsers_soc')
+
     this._router.navigate(['home'])
   }
 
