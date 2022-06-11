@@ -1,97 +1,97 @@
 <div style="margin-top: -10%;" *ngIf="deviceInfo.os == 'Windows'; else Mobile">
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky" id="mainNav" style="z-index: 80;">
-    <div class="container-fluid">
-        <a class="navbar-brand" routerLink="./">
-            <img src="https://dh2dlbjd2qx17.cloudfront.net/img/tut-logo.png" alt="" width="260" height="80" style="padding: auto;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky" id="mainNav" style="z-index: 80;">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="./">
+                <img src="https://dh2dlbjd2qx17.cloudfront.net/img/tut-logo.png" alt="" width="260" height="80" style="padding: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-            <ul class="navbar-nav me-auto" style="margin-left: 20px;">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="./">Home |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/blog">Blog </a>
-                </li>
-            </ul>
-
-            <div class>
-                <ul class="navbar-nav ms-auot">
-                    <li><a class="nav-link" id="sign-in" routerLink="/student-login">Sign in</a></li>
-                    <li><a class="nav-link" id="sign-up" routerLink="/student-reg">Sign up</a></li>
+                <ul class="navbar-nav me-auto" style="margin-left: 20px;">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="./">Home |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/blog">Blog </a>
+                    </li>
                 </ul>
-            </div>
 
+                <div class>
+                    <ul class="navbar-nav ms-auot">
+                        <li><a class="nav-link" id="sign-in" routerLink="/student-login">Sign in</a></li>
+                        <li><a class="nav-link" id="sign-up" routerLink="/student-reg">Sign up</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-    </div>
-</nav>
-<!-- Header -->
-<header name="home" style="display: flex;justify-content: center;align-items: center;">
+    </nav>
+    <!-- Header -->
+    <header name="home" style="display: flex;justify-content: center;align-items: center;">
 
-    <div class="container">
-        <div class="box">
+        <div class="container">
+            <div class="box">
 
-            <div class="title">
-                <span class="block"></span>
-                <h1>TUT Online Orientation<span></span></h1>
+                <div class="title">
+                    <span class="block"></span>
+                    <h1>TUT Online Orientation</h1>
+                </div>
+
+                <div class="role">
+                    <div class="block"></div>
+                    <p style="display: block;margin-left:auto;margin-right:auto">For first time students</p>
+                </div>
+
             </div>
-
-            <div class="role">
-                <div class="block"></div>
-                <p>For first For first time students</p>
-            </div>
-
         </div>
-    </div>
 
-    <div style="display: flex; justify-content: center;z-index: 40; position: absolute;">
-        <a routerLink="/student-login" (click)="startOr()" style=" justify-content: center;border-radius: 25px; border-width: 20px;" class="myButton">Start Orientation
+        <div style="display: flex; justify-content: center;z-index: 40; position: absolute;">
+            <a routerLink="/student-login" (click)="startOr()" style=" justify-content: center;border-radius: 25px; border-width: 20px;" class="myButton">Start Orientation
         <em class="ml-2" data-feather="arrow-right"></em>
     </a>
 
-    </div>
-
-    <div class="intro-text">
-        <mdb-carousel [animation]="'fade'" style="z-index: -10;">
-            <mdb-carousel-item style="height:1300px;width:100%">
-                <img style="object-fit: cover;" src="../../assets/img/ori29 (2 of 16) - Copy.jpg" class="d-block w-100 h-100" alt="..." />
-            </mdb-carousel-item>
-            <mdb-carousel-item style="height:1300px;width:100%">
-                <img style="object-fit: cover;" src="../../assets/img/ori29 (12 of 16).jpg" class="d-block w-100 h-100" alt="..." />
-            </mdb-carousel-item>
-            <mdb-carousel-item style="height:1300px;width:100%">
-                <img style="object-fit: cover;" src="../../../assets/img/ori31 (26 of 32).jpg" class="d-block w-100 h-100" alt="..." />
-            </mdb-carousel-item>
-            <mdb-carousel-item style="height:1300px;width:100%">
-                <img style="object-fit: cover;" src="../../assets/img/ori29 (16 of 16).jpg" class="d-block w-100 h-100" alt="..." />
-            </mdb-carousel-item>
-            <mdb-carousel-item style="height:1300px;width:100%">
-                <img style="object-fit: cover;" src="../../assets/img/ori31 (25 of 32).jpg" class="d-block w-100 h-100" alt="..." />
-            </mdb-carousel-item>
-            <mdb-carousel-item style="height:1300px;width:100%">
-                <img style="object-fit: cover;" src="../../assets/img/ori29 (11 of 16).jpg" class="d-block w-100 h-100" alt="..." />
-            </mdb-carousel-item>
-        </mdb-carousel>
-    </div>
-</header>
-
-
-
-<mat-card style="padding-bottom: 60px ">
-    <p style="color: #0d4794 ; text-align: center; font-size: small;"> Tshwane University of Technology in patnership with </p>
-    <div class="row">
-        <div class="logo center">
-            <img src="https://dh2dlbjd2qx17.cloudfront.net/img/Picture2.png" alt="Snow" style="width:100px;float: right;">
-        </div>
-        <div class="logo center">
-            <img src="https://dh2dlbjd2qx17.cloudfront.net/img/1200px-DHEAT_logo.png" alt="Forest" style="width:100px; float: left; position:relative;top: 11px;">
         </div>
 
-    </div>
-</mat-card>
+        <div class="intro-text">
+            <mdb-carousel [animation]="'fade'" style="z-index: -10;">
+                <mdb-carousel-item style="height:1300px;width:100%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (2 of 16) - Copy.jpg" class="d-block w-100 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:100%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (12 of 16).jpg" class="d-block w-100 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:100%">
+                    <img style="object-fit: cover;" src="../../../assets/img/ori31 (26 of 32).jpg" class="d-block w-100 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:100%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (16 of 16).jpg" class="d-block w-100 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:100%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori31 (25 of 32).jpg" class="d-block w-100 h-100" alt="..." />
+                </mdb-carousel-item>
+                <mdb-carousel-item style="height:1300px;width:100%">
+                    <img style="object-fit: cover;" src="../../assets/img/ori29 (11 of 16).jpg" class="d-block w-100 h-100" alt="..." />
+                </mdb-carousel-item>
+            </mdb-carousel>
+        </div>
+    </header>
+
+
+
+    <mat-card style="padding-bottom: 60px ">
+        <p style="color: #0d4794 ; text-align: center; font-size: small;"> Tshwane University of Technology in patnership with </p>
+        <div class="row">
+            <div class="logo center">
+                <img src="https://dh2dlbjd2qx17.cloudfront.net/img/Picture2.png" alt="Snow" style="width:100px;float: right;">
+            </div>
+            <div class="logo center">
+                <img src="https://dh2dlbjd2qx17.cloudfront.net/img/1200px-DHEAT_logo.png" alt="Forest" style="width:100px; float: left; position:relative;top: 11px;">
+            </div>
+
+        </div>
+    </mat-card>
 </div>
 
 
@@ -106,7 +106,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-    
+
                 <ul class="navbar-nav me-auto" style="margin-left: 20px;">
                     <li class="nav-item">
                         <a class="nav-link" routerLink="./">Home |</a>
@@ -115,14 +115,14 @@
                         <a class="nav-link" routerLink="/blog">Blog </a>
                     </li>
                 </ul>
-    
+
                 <div class>
                     <ul class="navbar-nav ms-auto">
                         <li><a class="nav-link" id="sign-in" routerLink="/student-login">Sign in</a></li>
                         <li><a class="nav-link" id="sign-up" routerLink="/student-reg">Sign up</a></li>
                     </ul>
                 </div>
-    
+
             </div>
         </div>
     </nav>
@@ -134,14 +134,14 @@
 
         <h1 style="position: absolute; z-Index:23;font-size: 240%;font-weight: 700;text-shadow: 2px 2px #0d4794;">TUT Online Orientation</h1>
         <h1 style="position: absolute; z-Index:23;font-size: 200%;font-weight: 400;margin-top: 20%;text-shadow: 2px 2px #0d4794;">For First time students</h1>
-    
+
         <div style="display: flex; justify-content: center;z-index: 40; position: absolute; margin-top: 60%;">
             <a routerLink="/student-login" (click)="startOr()" style=" justify-content: center;border-radius: 15px; border-width: 10px;" class="myButton">Start Orientation
             <em class="ml-2" data-feather="arrow-right"></em>
         </a>
-    
+
         </div>
-    
+
         <div class="intro-text">
             <mdb-carousel [animation]="'fade'" style="z-index: -10;">
                 <mdb-carousel-item style="height:1300px;width:50%">
@@ -170,7 +170,7 @@
 
 
 
-    
+
 </ng-template>
 
 <!-- //////////////////////// -->
