@@ -106,7 +106,7 @@ export class SurveyResponsesComponent implements OnInit  {
   {
     console.log({"data":this.dataSource.filteredData[0],"array_length":this.dataSource.filteredData[0].Survey.length})
 
-    this._orientationService.getSurveyReport({"data":this.dataSource.filteredData[0],"array_length":2}).subscribe((e)=>console.log(e))
+    this._orientationService.getSurveyReport({"data":this.dataSource.filteredData[0],"array_length":this.dataSource.filteredData[0].Survey.length}).subscribe((e)=>console.log(e))
     
   }
   
