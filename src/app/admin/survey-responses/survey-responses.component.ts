@@ -104,9 +104,9 @@ export class SurveyResponsesComponent implements OnInit  {
 
   generateRep()
   {
-    console.log(this.dataSource.filteredData[0])
+    console.log({"data":this.dataSource.filteredData[0],"array_length":this.dataSource.filteredData[0].Survey.length})
 
-    this._orientationService.getSurveyReport({"data":this.dataSource.filteredData[0]}).subscribe((e)=>console.log(e))
+    this._orientationService.getSurveyReport({"data":this.dataSource.filteredData[0],"array_length":2}).subscribe((e)=>console.log(e))
     
   }
   
