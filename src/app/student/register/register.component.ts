@@ -135,7 +135,7 @@ export class RegisterComponent implements OnInit {
 
     this._userService.sendOTP({"otp":this.otp,"email":this.email}).subscribe((result)=>{
 
-      if(result.message == "Message has been sent")
+      if(JSON.parse(result).message == "Message has been sent")
       {
             this.toast.success('OTP was sent succesfully')
       }
