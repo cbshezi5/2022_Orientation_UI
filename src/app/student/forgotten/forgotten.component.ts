@@ -50,7 +50,7 @@ export class ForgottenComponent implements OnInit {
           this.otp = generateRandomNumber().toString()
 
           this._userService.sendOTP({"otp":this.otp,"email":this.email}).subscribe((result)=>{
-            console.log(result)
+         
               if(JSON.parse(result).message == "Message has been sent")
               {
                 this._userService.logActivity({"useremail":this.email, "activity":"Forgot otp"}).subscribe(()=>{})

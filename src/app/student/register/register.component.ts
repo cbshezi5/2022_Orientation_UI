@@ -168,7 +168,7 @@ export class RegisterComponent implements OnInit {
         this._socketConnection.socket.emit('RegisteredUsers_soc')
         this._socketConnection.socket.emit('LoggedInUsers_soc')
         this.router.navigate([''])
-        console.log (this.email)
+       
       }
       else
       {
