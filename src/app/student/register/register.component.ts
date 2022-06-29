@@ -135,14 +135,13 @@ export class RegisterComponent implements OnInit {
 
     this._userService.sendOTP({"otp":this.otp,"email":this.email}).subscribe((result)=>{
 
-      if(result == "Message has been sent")
+      if(result.message == "Message has been sent")
       {
             this.toast.success('OTP was sent succesfully')
       }
       else
       {
           this.toast.error("Couldn't send the email to your please try again",'Oops')
-          console.log(result.message)
       }
 
     })
