@@ -84,17 +84,37 @@ export class SurveyResponsesComponent implements OnInit  {
     });
   }
 
-  applyFilter(event: Event) {
-    if(this.dataSource.filteredData.length == 1)
-    {
-      this.disabledGenerate = false;
-      this.generateState = "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  
-    }
-    else 
-    {
-      this.disabledGenerate = true;
-      this.generateState = "d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm" 
-    }
+//   applyFilter(event: Event) {
+//     if(this.dataSource.filteredData.length == 1)
+//     {
+//       this.disabledGenerate = false;
+//       this.generateState = "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  
+//     }
+//     else 
+//     {
+//       this.disabledGenerate = true;
+//       this.generateState = "d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm" 
+//     }
+//     const filterValue = (event.target as HTMLInputElement).value;
+//     this.dataSource.filter = filterValue.toLowerCase();
+//     if (this.dataSource.paginator) {
+//       this.dataSource.paginator.firstPage();
+//     }
+//   }
+  
+    applyFilter(event: Event) {
+    setTimeout(()=>{
+      if(this.dataSource.filteredData.length == 1)
+      {
+        this.disabledGenerate = false;
+        this.generateState = "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  
+      }
+      else 
+      {
+        this.disabledGenerate = true;
+        this.generateState = "d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm" 
+      }
+    },500)
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.toLowerCase();
     if (this.dataSource.paginator) {
